@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    --cyan-strong: hsl(172, 62%, 39%);
+    --cyan-very-dark: hsl(183, 100%, 15%);
+    --cyan-grayish-dark: hsl(186, 14%, 43%);
+    --cyan-grayish: hsl(184, 14%, 56%);
+    --cyan-grayish-light: hsl(185, 41%, 84%);
+    --cyan-very-light-grayish: hsl(180, 64%, 84%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Space Mono';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--cyan-grayish-dark);
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0;
+}
+
+p{
+    font-size: 1rem;
+}
+input{
+    background-color: var(--cyan-grayish-light);
+    border-color: transparent;
+    border-radius: 5px;
+    text-align: right;
+    font-family: inherit;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+}
+
+input[type='number']:focus-visible {
+    outline-color: var(--cyan-strong);
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+button{
+    font-family: inherit;
+    border-color: transparent;
+    border-radius: 2px;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--cyan-very-light-grayish);
+    gap: 0.5rem;
+    border-radius: 8px;
+}
+
+.title{
+    padding-bottom: 1.75rem;
+    letter-spacing: 0.5rem;
+}
+
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    height: 24rem;
+}
+
+.left-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.left-container .heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message{
+    color: red;
+    display: none;
+}
+
+.bill input{
+    background-image: url(../images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    width: 100%;
+}
+
+.tip-section .tip-btn{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tip-btn .tip-value{
+    width: 29%;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background-color: var(--cyan-very-dark);
+    color: var(--white);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.tip-btn .tip-value:hover{
+    background-color: var(--cyan-strong);
+}
+.tip-btn .tip-value-active{
+    background-color: var(--cyan-strong);
+}
+
+#custom-tip{
+    border-radius: 2px;
+    background-color: var(--white);
+    text-align: center;
+    color: black;
+}
+
+.people-count input{
+    background-image: url(../images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    width: 100%;
+}
+
+.right-container{
+    width: 45%;
+    background-color: var(--cyan-very-dark);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-left: -5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.amount-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-detail .tip-amount{
+    margin-right: 4rem;
+}
+
+.amount-detail .total-amount{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cyan-strong);
+}
+span{
+    color: var(--cyan-grayish);
+}
+.reset-button{
+    background-color: var(--cyan-strong);
+    color: var(--cyan-very-dark);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.reset-button:active,
+.reset-button:hover,
+.reset-button:focus{
+    background-color: var(--cyan-grayish-light);
+}
